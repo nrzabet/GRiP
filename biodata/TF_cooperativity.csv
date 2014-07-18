@@ -1,0 +1,6 @@
+"FIRSTSPECIES", "SECONDSPECIES", "TYPE", "FIRSTSPECIESDIRECTION", "SECONDSPECIESDIRECTION", "FIRSTSPECIESDNAREGION", "SECONDSPECIESDNAREGION", "DIMMERISATIONPROBABILITY", "AFFINITYINCREASE", "ISREVERSIBLE", "ISADDITIVE", "ISFIXED"
+"lacI", "lacI", 1, -1, -1, "K12:365146..365166", "K12:365639..365659", 0.9, 100, true, false, false
+"lacI", "lacI", 1, -1, -1, "K12:365639..365659", "K12:365547..365567", 0.9, 1, true, false, false
+"lacI", "lacI", 0, -1, -1, "", "", 0.9, 10, true, false, false
+"lacI", "lacI", 0, -1, -1, "", "", 0.9, 10, true, true, true
+"lacI", "lacI", 0, -1, -1, "", "", 0.9, 10, true, true, false
