@@ -6,21 +6,22 @@ package utilsGUI;
  *
  */
 public class GUIconstants {
-	public static final int SETUP_AREA_WIDTH=920;//200
-	public static final int SETUP_AREA_HIGHT=720;//200
-	public static final int SIMULATION_AREA_HIGHT=47;//200
-	public static final int SIMULATION_PROGRESS_MIN=0;//200
-	public static final int SIMULATION_PROGRESS_MAX=100;//200
-	public static final int SIMULATION_PROGRESS_MAX_STEP=1;//200
-	public static final String SIMULATION_PROGRESS_INIT="Loading...";//200
-	public static final int SIMULATION_PROGRESS_SIZE_WIDTH =420;//200
+	public static final int SETUP_AREA_WIDTH=920;
+	public static final int SETUP_AREA_HIGHT=720;
+	public static final int SCROLLBAR_SIZE=20;
+	public static final int SIMULATION_AREA_HIGHT=47;
+	public static final int SIMULATION_PROGRESS_MIN=0;
+	public static final int SIMULATION_PROGRESS_MAX=100;
+	public static final int SIMULATION_PROGRESS_MAX_STEP=1;
+	public static final String SIMULATION_PROGRESS_INIT="Loading...";
+	public static final int SIMULATION_PROGRESS_SIZE_WIDTH =420;
 
-	public static final int SIMULATION_PROGRESS_SIZE_HIGHT =35;//200
-	public static final int SIMULATION_TIME_LABEL_WIDTH =200;//200
+	public static final int SIMULATION_PROGRESS_SIZE_HIGHT =35;
+	public static final int SIMULATION_TIME_LABEL_WIDTH =200;
 
 	
-	public static final int SIMULATION_PARAMETERS_SIZE_WIDTH =600;//200
-	public static final int SIMULATION_PARAMETERS_SIZE_HIGHT =250;//200
+	public static final int SIMULATION_PARAMETERS_SIZE_WIDTH =600;
+	public static final int SIMULATION_PARAMETERS_SIZE_HIGHT =250;
 	
 	public static final String WINDOW_TITLE="GRiP";
 	public static final String SIMULATE_BUTTON_STOP="Stop";

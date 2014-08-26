@@ -33,6 +33,8 @@ import utilsGUI.*;
 public class SimulatorGUI {
 	private JFrame frame;
 	private JPanel setupArea;
+	private JScrollPane setupAreaScroll;
+
 	private JTabbedPane setupAreaTabbedPane;
 	private JPanel simulationArea;
 	private JButton simulationsStart;
@@ -150,7 +152,7 @@ public class SimulatorGUI {
 		
 		frame.pack();
 		frame.setLocationRelativeTo(null);
-		frame.setResizable(false);
+		frame.setResizable(true);
 		frame.setVisible(true);
 	}
 	
@@ -286,7 +288,7 @@ public class SimulatorGUI {
 		setupArea = new JPanel();		
 	
 		setupAreaTabbedPane = new JTabbedPane();
-		setupAreaTabbedPane.setPreferredSize(new Dimension(GUIconstants.SETUP_AREA_WIDTH,GUIconstants.SETUP_AREA_HIGHT));
+		setupAreaTabbedPane.setPreferredSize(new Dimension(GUIconstants.SETUP_AREA_WIDTH-GUIconstants.SCROLLBAR_SIZE,GUIconstants.SETUP_AREA_HIGHT-GUIconstants.SCROLLBAR_SIZE));
 
 		setupArea.setLayout(new FlowLayout());
 		
@@ -311,7 +313,13 @@ public class SimulatorGUI {
 
 		
 		setupArea.add(setupAreaTabbedPane);
-		contentPane.add(setupArea,BorderLayout.CENTER);
+		
+		setupAreaScroll = new JScrollPane(setupArea);
+		setupAreaScroll.setPreferredSize(new Dimension(GUIconstants.SETUP_AREA_WIDTH,GUIconstants.SETUP_AREA_HIGHT));
+		contentPane.add(setupAreaScroll,BorderLayout.CENTER);
+		
+		
+		//contentPane.add(setupArea,BorderLayout.CENTER);
 	}
 	
 
