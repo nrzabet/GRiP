@@ -897,28 +897,29 @@ public class Cell implements Serializable {
 	 */
 	private void printTargetSiteToFollowInfo(){
 		
-		
-		BufferedWriter statusBuffer =  null;
-        try {
-            //Construct the BufferedWriter object
-        		if(this.outputPath.isEmpty()){
-        			statusBuffer = new BufferedWriter(new FileWriter(this.outputTargetSiteFollowFile, true));
-        		} else{
-        			statusBuffer = new BufferedWriter(new FileWriter(new File(this.outputPath,this.outputTargetSiteFollowFile), true));
-        		}
-        		for(int i=0; i<(this.TargetSiteFollowLines.size()-1); i++){
-        			statusBuffer.write(this.TargetSiteFollowLines.get(i));
-        			statusBuffer.newLine();
-        		}
-			statusBuffer.flush();
-			statusBuffer.close();        		
-			this.TargetSiteFollowLines.clear();
-        } catch (FileNotFoundException ex) {
-            ex.printStackTrace();
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-		
+		if(this.ip.ENSEMBLE_SIZE.value == 1 && this.ip.FOLLOW_TS.value){
+
+			BufferedWriter statusBuffer =  null;
+	        try {
+	            //Construct the BufferedWriter object
+	        		if(this.outputPath.isEmpty()){
+	        			statusBuffer = new BufferedWriter(new FileWriter(this.outputTargetSiteFollowFile, true));
+	        		} else{
+	        			statusBuffer = new BufferedWriter(new FileWriter(new File(this.outputPath,this.outputTargetSiteFollowFile), true));
+	        		}
+	        		for(int i=0; i<(this.TargetSiteFollowLines.size()-1); i++){
+	        			statusBuffer.write(this.TargetSiteFollowLines.get(i));
+	        			statusBuffer.newLine();
+	        		}
+				statusBuffer.flush();
+				statusBuffer.close();        		
+				this.TargetSiteFollowLines.clear();
+	        } catch (FileNotFoundException ex) {
+	            ex.printStackTrace();
+	        } catch (IOException ex) {
+	            ex.printStackTrace();
+	        }
+		}
 	}
 
 	/**
@@ -1358,28 +1359,28 @@ public class Cell implements Serializable {
 	 */
 	public void  printTargetSitesInformation(String path, String filename){
 		
-		
-		BufferedWriter bufferFile =  null;
-        try {
-            //Construct the BufferedWriter object
-        		if(this.outputPath.isEmpty()){
-        			bufferFile = new BufferedWriter(new FileWriter(this.outputTargetSiteFile));
-        		} else{
-        			bufferFile = new BufferedWriter(new FileWriter(new File(this.outputPath,this.outputTargetSiteFile)));
-        		}   
-        		//header
-        		String str="\"targetSite\", \"firstReached\", \"timesReached\", \"timeOccupied\"";
-        		bufferFile.write(str);
-        		bufferFile.newLine();
-    			bufferFile.write(tsg.toString());
-        		bufferFile.flush();
-        		bufferFile.close();
-        } catch (FileNotFoundException ex) {
-            ex.printStackTrace();
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-		
+		if(this.ip.ENSEMBLE_SIZE.value == 1 && this.ip.FOLLOW_TS.value){
+			BufferedWriter bufferFile =  null;
+	        try {
+	            //Construct the BufferedWriter object
+	        		if(this.outputPath.isEmpty()){
+	        			bufferFile = new BufferedWriter(new FileWriter(this.outputTargetSiteFile));
+	        		} else{
+	        			bufferFile = new BufferedWriter(new FileWriter(new File(this.outputPath,this.outputTargetSiteFile)));
+	        		}   
+	        		//header
+	        		String str="\"targetSite\", \"firstReached\", \"timesReached\", \"timeOccupied\"";
+	        		bufferFile.write(str);
+	        		bufferFile.newLine();
+	    			bufferFile.write(tsg.toString());
+	        		bufferFile.flush();
+	        		bufferFile.close();
+	        } catch (FileNotFoundException ex) {
+	            ex.printStackTrace();
+	        } catch (IOException ex) {
+	            ex.printStackTrace();
+	        }
+		}
 	
 	}
 	
